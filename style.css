@@ -1,0 +1,151 @@
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GOOGLE FONTS IMPORT - example using Roboto and Merriweather */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@400;700&display=swap');
+
+/* GENERAL */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background: #fdf6e3; /* Light cream background */
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* CONTAINERS */
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px 15px;
+}
+
+/* HEADER */
+header {
+    background: #005f73; /* Deep teal */
+    color: white;
+    text-align: center;
+    padding: 80px 15px;
+    font-family: 'Merriweather', serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gray-bg {
+    background: #e9ecef; /* soft gray background */
+}
+
+/* SECTION TITLES */
+.section h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0a9396;
+    border-bottom: 3px solid #94d2bd;
+    padding-bottom: 8px;
+    max-width: fit-content;
+    transition: border-color 0.3s ease;
+}
+
+/* PROJECT CARDS */
+.project-card {
+    border: 2px solid #0a9396;
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    /* increase box-shadow for more prominence */
+    box-shadow: 0 8px 15px rgba(10, 147, 150, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(10, 147, 150, 0.2);
+}
+
+.project-card h3 {
+    color: #005f73;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* CONTACT SECTION */
+#contact p {
+    font-size: 1.2rem;
+}
+
+/* FOOTER */
+footer {
+    background: #001219; /* Very dark navy */
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.4rem;
+    }
+    header p {
+        font-size: 1.1rem;
+    }
+    .section h2 {
+        font-size: 2rem;
+    }
+    .project-card {
+        padding: 15px;
+    }
+    body {
+        font-size: 15px;
+    }
+}
+
+/* Additional utility classes for spacing and layout */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card.flex-half {
+    flex: 1 1 calc(50% - 20px);
+}
+
+/* Smooth scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
